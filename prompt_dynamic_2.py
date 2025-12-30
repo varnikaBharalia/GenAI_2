@@ -38,17 +38,13 @@ template = load_prompt('template.json')
 
 # 5. Execute using .invoke()
 if st.button('Submit'):
-    # We pass the dictionary directly to template.invoke()
-    # This returns a PromptValue object
-    prompt_value = template.invoke({
+    chain = template | llm
+    result = chain.invoke({
         "paper_input": paper_input,
         "style_input": style_input,
         "length_input": length_input
     })
     
-    # We pass the PromptValue object directly to the model
-    response = llm.invoke(prompt_value)
-    
     # Display the result
     st.subheader("Paper Summary")
-    st.write(response.content)
+    st.write(result.content)
