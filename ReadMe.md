@@ -34,6 +34,6 @@
     Why use PromptTemplate over f strings?
         1) Default validation --> validate_template= true -- then we'll get a error in this and tell us that kuch etra ya km is there in the input_variavles that are not present in the prompt_template --> also this will give error in the devlepoment time not on the run time .
 
-        2) Reusable --> template can be saved as a json file and can be called as per that so it is reuseable . 
+        2) Reusable --> template can be saved as a json file and can be called as per that so it is reuseable . prompt_generator3.py
 
         3) LangChain Ecosystem --> 
