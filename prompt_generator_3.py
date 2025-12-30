@@ -14,11 +14,10 @@ Explanation Length: {length_input}
 
 2. Analogies:
 - Use relatable analogies to simplify complex ideas.
-
 If certain information is not available in the paper, respond with: "Insufficient information available" instead of guessing.
 Ensure the summary is clear, accurate, and aligned with the provided style and length.""",
     input_variables=["paper_input", "style_input", "length_input"],
-    validate_template=True
+    validate_template=True # Ensures all placeholders are filled and if not, raises an error during development time.
 )
 
 # saving template
