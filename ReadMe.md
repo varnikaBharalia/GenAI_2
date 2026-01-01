@@ -45,4 +45,12 @@
 
 8. Creating a Chatbot - console based chatbot , not ui .this chatbot is not stoing history. So this doesnt have context of the previous talks. so we need to maintain alist where we can append the chatting .
     but but ... we are facing an isssue that this doesnt gives us that which one is by you and which one is by AI.so we can improve this by storing the messages as dict with role and content. 
-    1. This problem was solved by langChain internally 
+    1. This problem was solved by langChain internally. so here comes the types of messages
+
+9. Types of messages in langchain:-(messages.py)
+    a) System Messages - these are the system level instructions that we give to the model to set the behavior of the model.
+            For example, if we want the model to behave like a helpful assistant, we can give the system message as "You are a helpful assistant".
+        - These messages help in setting the context for the conversation and guide the model's responses.
+        - maily we send these in the begining of the conversation.
+    b) Human Messages -  mainly the messages that user send to LLM
+    c) AI messages - mainly the responses that LLM sends back to user
