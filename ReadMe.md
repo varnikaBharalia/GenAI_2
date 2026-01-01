@@ -43,5 +43,6 @@
                 })
         4) CONCULSION : While f-strings are useful for simple scripts, PromptTemplate provides a production-grade framework. It ensures my Research Tool remains stable through input validation, stays organized via JSON-based modularity, and remains fully compatible with advanced LangChain features like LCEL and structured output parsing
 
-8. Creating a Chatbot - console based chatbot , not ui .
-    this chatbot is not stoing history. 
+8. Creating a Chatbot - console based chatbot , not ui .this chatbot is not stoing history. So this doesnt have context of the previous talks. so we need to maintain alist where we can append the chatting .
+    but but ... we are facing an isssue that this doesnt gives us that which one is by you and which one is by AI.so we can improve this by storing the messages as dict with role and content. 
+    1. This problem was solved by langChain internally 
