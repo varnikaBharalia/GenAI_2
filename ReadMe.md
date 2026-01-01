@@ -48,9 +48,11 @@
     1. This problem was solved by langChain internally. so here comes the types of messages
 
 9. Types of messages in langchain:-(messages.py)
-    a) System Messages - these are the system level instructions that we give to the model to set the behavior of the model.
+        a) System Messages - these are the system level instructions that we give to the model to set the behavior of the model.
             For example, if we want the model to behave like a helpful assistant, we can give the system message as "You are a helpful assistant".
         - These messages help in setting the context for the conversation and guide the model's responses.
         - maily we send these in the begining of the conversation.
-    b) Human Messages -  mainly the messages that user send to LLM
-    c) AI messages - mainly the responses that LLM sends back to user
+        b) Human Messages -  mainly the messages that user send to LLM
+        c) AI messages - mainly the responses that LLM sends back to user
+
+10. These messages are used to maintain the chat History with the role based. -- so implementing these messages into the chatbot_4.py

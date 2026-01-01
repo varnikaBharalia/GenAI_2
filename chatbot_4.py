@@ -1,4 +1,6 @@
 from langchain_groq import ChatGroq
+# import chatHistory from messages 
+from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -12,16 +14,20 @@ model = ChatGroq(
 
 # 2.Chat History - so that it can gives us answer based on previous context
 #  so we need to maintain the history of the conversation. we'll dfine a list to store the messages.
-chat_history = []
+chat_history = [
+    SystemMessage(content="You are a helpful AI assistant.")
+]
 
 
 while True:
     user_input = input('YOU:')
-    chat_history.append(user_input)
+    # chneges here --------->>
+    chat_history.append(HumanMessage(content=user_input))
     if user_input == 'exit':
         break
-    result = model.invoke(chat_history)  
-    chat_history.append(result.content)
+    result = model.invoke(chat_history) 
+    # Changes here --------->> 
+    chat_history.append(AIMessage(content=result.content))
     print('AI:' , result.content)
 
 print("Chat History:" , chat_history)  # this gives us the chathistory : -
