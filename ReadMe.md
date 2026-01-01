@@ -56,3 +56,24 @@
         c) AI messages - mainly the responses that LLM sends back to user
 
 10. These messages are used to maintain the chat History with the role based. -- so implementing these messages into the chatbot_4.py
+
+11. SO we read so far that :-
+                        models
+                          |
+                        /   \
+                       /     \
+                      /       \
+                     /         \
+                single msg   list of msg
+        (single turn           (multi-turn conv)
+        standalone queries)              /    \
+        /       \                       /      \
+       /         \                     /        ----------------> dynamic msgs(ChatPromptTemplate)
+      /           \            staic msg(sysytem, human AImsgs)
+static mssg      dynamic mssgs
+                (promptTemplate)
+
+12. Example: 
+        System msg->dynamic  : --> You are helpful {domain} expert
+        Human mssg -> dynmic : --> " "  "  "
+        Explain me about {Topic} 
