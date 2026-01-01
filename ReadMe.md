@@ -77,3 +77,5 @@ static mssg      dynamic mssgs
         System msg->dynamic  : --> You are helpful {domain} expert
         Human mssg -> dynmic : --> " "  "  "
         Explain me about {Topic} 
+
+13. Message placeholder :- A msgPlaceholder in langChain placeholder used inside a chatPromptTemplate to dynamicallly insert chat history a list of mssgs at runtime.
