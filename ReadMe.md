@@ -42,3 +42,6 @@
                     dict..
                 })
         4) CONCULSION : While f-strings are useful for simple scripts, PromptTemplate provides a production-grade framework. It ensures my Research Tool remains stable through input validation, stays organized via JSON-based modularity, and remains fully compatible with advanced LangChain features like LCEL and structured output parsing
+
+8. Creating a Chatbot - console based chatbot , not ui .
+    this chatbot is not stoing history. 
